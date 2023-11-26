@@ -42,7 +42,7 @@ using namespace std;
 
 int main()
 {
-    int n = 20;
+    int n = 6;
 
     for(int row = 0; row < n; row++){
         int col = 0;
