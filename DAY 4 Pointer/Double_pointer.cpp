@@ -1,0 +1,19 @@
+// Double Pointer - used to store address of a signal pointer
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int x = 5;
+    int *ptr1 = &x;
+    int **ptr2 = &ptr1;
+
+    cout << &x << endl;
+    cout << *ptr1 << endl;
+    cout << ptr2 << endl; // ptr1 address
+    cout << *ptr2 << endl; // x address
+    cout << **ptr2 << endl; // ptr1 value
+
+    return 0;
+}
