@@ -5,7 +5,7 @@
 using namespace std;
 
 void lastOccurence(vector<int> &brr,int x){
-    for (int i = brr.size(); i >= 0; i--){
+    for (int i = brr.size()-1; i >= 0; i--){
         if(brr[i] == x){
             cout << "Last Occurence or Index is : " << i+1 << endl;
             break;
