@@ -24,18 +24,20 @@ using namespace std;
 void mySort(vector<int>&v){
     int start = 0 , end = v.size()-1;
     while(start < end){
-        if(v[start] == 0) start++;
-        if(v[end] == 1) end--;
         if(v[start] == 1 && v[end] == 0){
             int temp = v[start];
             v[start] = v[end];
             v[end] = temp;
+            start++;
+            end--;
         }
+        if(v[start] == 0) start++;
+        if(v[end] == 1) end--;
     }
 }
 
 int main(){
-    vector<int> v{1, 1, 0, 1, 0, 0, 1, 0, 1, 0};
+    vector<int> v{1, 0 ,1, 0, 1, 0, 1, 1, 1};
 
     for(auto v1:v){
         cout << v1 << " ";
