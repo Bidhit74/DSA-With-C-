@@ -27,8 +27,8 @@ void printMultiplicationMatrix(vector<vector<int>> &matrix, vector<vector<int>> 
 
     // Perform matrix multiplication
     for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            for (int k = 0; k < cols; k++) {
+        for (int j = 0; j < cols1; j++) {
+            for (int k = 0; k < rows1; k++) {
                 multiplicationMatrix[i][j] += matrix[i][k] * matrix1[k][j];
             }
         }
