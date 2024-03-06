@@ -10,6 +10,53 @@
 // 2 5 8
 // 1 4 7
 
+// Optimized Way solve this problem
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void printRotateAntiClockwise(vector<vector<int>> &matrix){
+    int n = matrix.size();
+    //Step 1: Matrix Transpose
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            if(i<j){
+                swap(matrix[i][j],matrix[j][i]);
+            }
+        }
+    }
+
+    // Step 2: Reverse each column 
+        for(int i = 0; i < n; i++){
+        for(int j = 0; j < n/2; j++){
+            swap(matrix[j][i],matrix[n-1-j][i]);
+        }
+    }
+
+    // Matrix Printing Transposing
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            cout << matrix[i][j] << " "; 
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    vector<vector<int>> Matrix = {{1, 2, 3}, {4, 5, 6}, {7 ,8, 9}};
+    printRotateAntiClockwise(Matrix);
+    return 0;
+}
+
+
+
+
+
+
+
+/*
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -40,4 +87,5 @@ int main()
     printRotateAntiClockwise(Matrix);
     return 0;
 }
+*/
 
