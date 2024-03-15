@@ -2,25 +2,51 @@
 
 
 // Method - 1 : (brute force)
+// Observations : Time Consuming but space efficient.
 #include <iostream>
 #include <vector>
 using namespace std;
 
+// int main()
+// {
+//     vector<int> arr = {6, 3, 2, 4, 1, 7, 2, 9};
+//     int n = arr.size();
+//     bool flag = false;
+
+//     for(int i = 0; i < n-1; i++){
+//         for(int j = i+1; j < n; j++){
+//             if(arr[i] == arr[j]){
+//                 cout << arr[i];
+//                 flag = true;
+//                 break;
+//             }
+//         }
+//         if(flag== true) break;
+//     }
+//     return 0;
+// }
+
+// Method - 2 : (Another method) 
+// Observation : Time Efficient but space consuming
+// problem : We are using extra space
+
 int main()
 {
-    vector<int> arr = {6, 3, 2, 4, 1, 7, 2, 9};
+    vector<int> arr = {3, 2, 1, 6, 2, 5};
     int n = arr.size();
+    vector<int> v(n,0); // using extra space
     bool flag = false;
-
-    for(int i = 0; i < n-1; i++){
-        for(int j = i+1; j < n; j++){
-            if(arr[i] == arr[j]){
-                cout << arr[i];
-                flag = true;
-                break;
-            }
+    for(int i = 0; i < n; i++){
+        v[arr[i]] += 1;
+        if(v[arr[i]]==2){
+            cout << arr[i] << endl;
+            flag = true;
+            break;
         }
-        if(flag== true) break;
     }
+    
+    if(flag) cout << "Duplicate availabe" << endl;
+    else cout << "Duplicate not availabe" << endl;
+    
     return 0;
 }
