@@ -1,8 +1,9 @@
 // Question : Given array of size n+1 consisting of integers from 1 to n one of the elements is duplicate element.
 
-
 // Method - 1 : (brute force)
 // Observations : Time Consuming but space efficient.
+// Time Complexity : O(n^2)
+// Space Complexity : O(1)
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -29,6 +30,8 @@ using namespace std;
 // Method - 2 : (Another method) 
 // Observation : Time Efficient but space consuming
 // problem : We are using extra space
+// Time Complexity : O(n)
+// Space Complexity : O(n)
 
 // int main()
 // {
@@ -54,6 +57,8 @@ using namespace std;
 
 // Method - 3 : (Using Math) Best Method 
 // Observation : Time and space is efficient
+// Time Complexity : O(n)
+// Space Complexity : O(1)
 
 int main()
 { 
